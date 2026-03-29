@@ -1,4 +1,4 @@
-#laravel-13 #laravel13
+**#laravel-13 #laravel13**
 setup a new larvel 13 project  step
 
 1- composer global require laravel/installer
@@ -6,7 +6,7 @@ setup a new larvel 13 project  step
 3- cd project-name
 4- npm install vite@5 laravel-vite-plugin@1
 
-#migrate you tabel in database
+**#migrate you tabel in database**
 1- php artisan migrate:fresh
 php artisan vendor:publish --tag=livewire-config
 
