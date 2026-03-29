@@ -10,7 +10,14 @@ setup a new larvel 13 project  step
 1- php artisan migrate:fresh
 php artisan vendor:publish --tag=livewire-config
 
-php artisan serve
+# setup a this project
+1- composer install
+2- create .env file 
+3- setup a Database command with  php artisan migrate
+4- php artisan db:seed --class=AdminSeeder
+
+**run the project**
+ php artisan serve and open a browser 
 
 #sourabh kumar Devloped a new ecommerce website
 
