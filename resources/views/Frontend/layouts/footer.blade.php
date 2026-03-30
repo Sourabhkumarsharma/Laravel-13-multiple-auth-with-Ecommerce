@@ -70,7 +70,7 @@
 						GET IN TOUCH
 					</h4>
 
-					<p class="stext-107 cl7 size-201">
+					<p class="stext-107 cl7  ">
 						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
 					</p>
 
@@ -101,7 +101,7 @@
 						</div>
 
 						<div class="p-t-18">
-							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+							<button class="flex-c-m w-auto stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
 								Subscribe
 							</button>
 						</div>

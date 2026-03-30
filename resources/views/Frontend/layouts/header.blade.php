@@ -1,4 +1,4 @@
-@if(url()->current() == route('index'))
+@if(url()->current() == route('index') || url()->current() == route('dashboard') )
      
 <header>
 		<!-- Header desktop -->
@@ -14,10 +14,20 @@
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
 							Help & FAQs
 						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							My Account
+						@if(Auth::check())
+						<a href="{{url('profile')}}" class="flex-c-m trans-04 p-lr-25">
+							({{ Auth::user()->name }})
+							<br>
+						My Account
 						</a>
+						@else
+						<a href="#" class="flex-c-m trans-04 p-lr-25">
+							Sign In
+						</a>
+						@endif
+
+
+						
 
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
 							EN
@@ -26,6 +36,20 @@
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
 							USD
 						</a>
+						<a href="#">
+						  <form method="POST" action="{{ route('logout') }}" class="w-full">
+                        @csrf
+                        <button
+                            as="button"
+                            type="submit"
+                            icon="arrow-right-start-on-rectangle"
+                            class="w-full cursor-pointer text-white p-2"
+                            data-test="logout-button"
+                        >
+                            {{ __('Log out') }}
+						</button>
+                    </form>
+					</a>
 					</div>
 				</div>
 			</div>
@@ -143,6 +167,20 @@
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
 							USD
 						</a>
+						<a href="#">
+						<form method="POST" action="{{ route('logout') }}" class="w-full">
+                        @csrf
+                        <button
+                            as="button"
+                            type="submit"
+                            icon="arrow-right-start-on-rectangle"
+                            class="w-full cursor-pointer text-white p-2"
+                            data-test="logout-button"
+                        >
+                            {{ __('Log out') }}
+						</button>
+                    </form>
+					</a>
 					</div>
 				</li>
 			</ul>
@@ -215,9 +253,17 @@
 							Help & FAQs
 						</a>
 
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							My Account
+						@if(Auth::check())
+						<a href="{{url('profile')}}" class="flex-c-m trans-04 p-lr-25">
+							({{ Auth::user()->name }})
+							<br>
+						My Account
 						</a>
+						@else
+						<a href="#" class="flex-c-m trans-04 p-lr-25">
+							Sign In
+						</a>
+						@endif
 
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
 							EN

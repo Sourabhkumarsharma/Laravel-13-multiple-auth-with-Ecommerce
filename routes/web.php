@@ -10,9 +10,9 @@ use App\Livewire\Admin\Login;
 // Route::view('/', 'welcome', [
 //     'canRegister' => Features::enabled(Features::registration()),
 // ])->name('home');
-Route::get('login', function () {
-    return view('/login', 'livewire.auth.user-login');
-})->name('login');
+// Route::get('login', function () {
+//     return view('/login', 'livewire.auth.user-login');
+// })->name('login');
 // Route::get('admin/login', function () {
 //     return view('/admin/login', 'livewire.admin.admin-login');
 // })->name('admin.login');

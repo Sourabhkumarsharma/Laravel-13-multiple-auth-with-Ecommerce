@@ -1,3 +1,6 @@
+@extends('frontend.layouts.app')
+
+@section('content') 
 <x-layouts::auth :title="__('Register')">
     <div class="flex flex-col gap-6">
         <x-auth-header :title="__('Create an account')" :description="__('Enter your details below to create your account')" />
@@ -53,7 +56,7 @@
             />
 
             <div class="flex items-center justify-end">
-                <flux:button type="submit" variant="primary" class="w-full" data-test="register-user-button">
+                <flux:button type="submit" variant="primary" class="w-full btn btn-primary" data-test="register-user-button">
                     {{ __('Create account') }}
                 </flux:button>
             </div>
@@ -65,3 +68,4 @@
         </div>
     </div>
 </x-layouts::auth>
+@endsection
