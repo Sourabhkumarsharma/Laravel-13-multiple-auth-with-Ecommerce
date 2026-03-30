@@ -30,7 +30,7 @@ Route::middleware('auth:web')->group(function () {
 });
 
 Route::middleware('auth:admin')->group(function () {
-    Route::view('/admin/dashboard', 'dashboard')->name('admin.dashboard');
+    Route::view('/admin/dashboard', 'Admin.dashboard')->name('admin.dashboard');
 });
 Route::prefix('{current_team}')
     ->middleware(['auth', 'verified', EnsureTeamMembership::class])
