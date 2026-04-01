@@ -7,6 +7,7 @@ use App\Livewire\Actions\Logout;
 use   Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use App\Livewire\Admin\Login;
+use App\Http\Controllers\MigrationController;
 // Route::view('/', 'welcome', [
 //     'canRegister' => Features::enabled(Features::registration()),
 // ])->name('home');
@@ -42,6 +43,16 @@ Route::prefix('{current_team}')
 
         Route::get('/login', Login::class)->name('admin.login');
 
+        Route::get('setting/index', Login::class)->name('admin.setting.index');
+        Route::get('/migration', [MigrationController::class, 'index'])->name('admin.migration.index');
+        Route::get('/create', [MigrationController::class, 'create'])->name('admin.migration.create');
+        Route::post('/store', [MigrationController::class, 'store'])->name('admin.migration.store');
+
+        Route::get('/{id}/edit', [MigrationController::class, 'edit'])->name('admin.migration.edit');
+        Route::post('/{id}/update', [MigrationController::class, 'update'])->name('admin.migration.update');
+
+        Route::delete('/{id}', [MigrationController::class, 'destroy'])->name('admin.migration.delete');
+        Route::get('/module', Login::class)->name('admin.setting.module');
 
     });
 
@@ -89,6 +100,8 @@ Route::get('checkout', function () {
 })->name('checkout');
 
 require __DIR__.'/settings.php';
+
+
 Route::post('/logout', function () {
 
     if (Auth::guard('admin')->check()) {
@@ -103,3 +116,8 @@ Route::post('/logout', function () {
 Route::get('/home', function () {
     return redirect('/dashboard');
 })->name('home');
+
+
+
+
+ 

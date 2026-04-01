@@ -62,6 +62,11 @@
 								FAQs
 							</a>
 						</li>
+						<li class="p-b-10">
+							<a href="{{route('admin.login')}}" class="stext-107 cl7 hov-cl1 trans-04">
+								Admin
+							</a>
+						</li>
 					</ul>
 				</div>
 

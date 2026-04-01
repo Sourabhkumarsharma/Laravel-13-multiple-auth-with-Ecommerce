@@ -21,7 +21,7 @@
 						My Account
 						</a>
 						@else
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
+						<a href="{{ route('login') }}" class="flex-c-m trans-04 p-lr-25">
 							Sign In
 						</a>
 						@endif
@@ -36,6 +36,11 @@
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
 							USD
 						</a>
+						 
+							<a href="{{route('admin.login')}}" target="blank" class="flex-c-m trans-04 p-lr-25">
+								Admin
+							</a>
+						 
 						<a href="#">
 						  <form method="POST" action="{{ route('logout') }}" class="w-full">
                         @csrf
@@ -260,7 +265,7 @@
 						My Account
 						</a>
 						@else
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
+						<a href="{{ route('login') }}" class="flex-c-m trans-04 p-lr-25">
 							Sign In
 						</a>
 						@endif
@@ -272,6 +277,21 @@
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
 							USD
 						</a>
+						<a href="{{route('admin.login')}}" target="blank" class="flex-c-m trans-04 p-lr-25">
+								Admin
+						</a>
+						<form method="POST" action="{{ route('logout') }}" class="w-full">
+                        @csrf
+                        <button
+                            as="button"
+                            type="submit"
+                            icon="arrow-right-start-on-rectangle"
+                            class="w-full cursor-pointer text-white p-2"
+                            data-test="logout-button"
+                        >
+                            {{ __('Log out') }}
+						</button>
+                    </form>
 					</div>
 				</div>
 			</div>
@@ -389,6 +409,21 @@
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
 							USD
 						</a>
+						<a href="{{route('admin.login')}}" target="blank" class="flex-c-m trans-04 p-lr-25">
+								Admin
+						</a>
+						<form method="POST" action="{{ route('logout') }}" class="w-full">
+                        @csrf
+                        <button
+                            as="button"
+                            type="submit"
+                            icon="arrow-right-start-on-rectangle"
+                            class="w-full cursor-pointer text-white p-2"
+                            data-test="logout-button"
+                        >
+                            {{ __('Log out') }}
+						</button>
+                    </form>
 					</div>
 				</li>
 			</ul>
